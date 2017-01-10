@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
@@ -28,7 +29,6 @@
 		}
 		div.haut_img_loop img {
 			position: absolute;
-			/*position: relative;*/
 			right: 40px;
     		width: 230px;
     		height: auto;
@@ -56,6 +56,7 @@
 			margin-left: auto;
 		}
 		.gauche_gal, .droite_gal{
+			z-index: 0;
 			display: inline-block;
 			vertical-align: top;
 			position: relative;
@@ -64,7 +65,7 @@
 			height: 425px;
 			padding-top: 5px;
 			padding-bottom: 0px;
-			margin: 5px;
+			margin: 7px;
 		}
 
     	div.gauche_img img, div.droite_img img {
@@ -77,7 +78,6 @@
     	}
 
     	div.droite_mur {
-			/*position: relative;*/
 			display: block;
 			background-image: url("resources/brick.jpg");
 			background-repeat: repeat;
@@ -87,6 +87,7 @@
     		height: 70px;
     	}
     	.centre_gal {
+    		z-index: 0;
 			display: inline-block;
 			position: relative;
 			vertical-align: top;
@@ -96,19 +97,16 @@
 			margin: 5px;
 		}
 		.centre_img img {
-			/*display: block;*/
     		padding: 12px;
-    		/*margin: 8px;*/
     		width: 1000px;
     		height: auto;
     	}
 		.shadow{
 			box-shadow: 5px 5px 5px 5px  #212121;
 		}
-
 		.radius{
 			border-radius: 10px;	
-}
+		}
 		h2{
 			color: #333333;
 			margin: 0;
@@ -127,6 +125,35 @@
     		width: 75px;
 			border: 3px solid red;
 		}
+		.box {
+			z-index: 1;
+			position: absolute;
+    		/*float: left;*/
+    		display: block;
+    		left: 50px;
+    		width: 520px;
+    		height: 165px;
+    		background-color: #88FF89;
+    		margin-top: -100px;
+		}
+
+		p.box-texte{
+			font-family: sans-serif;
+			font-size: 14px;
+			text-align: left;
+			letter-spacing: 1.5px;
+			padding: 10px;
+		}
+		p.box-texte span.big{
+			font-size: 26px;
+		}
+		p.box-texte span.italic{
+			font-style: italic;
+		}
+		p.box-texte span.ordi{
+			font-style: italic;
+			text-shadow: 5px 5px 3px #BA8045;
+		}
 	</style>
 
 </head>
@@ -139,29 +166,36 @@
 		<div class="haut_img_close"><a href="http://www.relaischateaux.com"  target="_blank"><img title="Déconnecter" src="resources/close.gif"></div>	
 	</div>
 	<div class="content_gal" align="center">
-	<div class="gauche_gal radius shadow">
-		<div class="gauche_img"><a><img alt="Avancer" title="Avancer" src="resources/arrow.png"></a></div>
-		<div class="gauche_img"><a><img alt="Prendre" title="Prendre" src="resources/main.png"></a></div>
-		<div class="gauche_img"><a><img alt="Regarder" title="Regarder" src="resources/oeil.png"></a></div>
-		<div class="gauche_img"><a><img alt="Utiliser" title="Utiliser" src="resources/outil.png"></a></div>
-		<div class="gauche_img"><a><img alt="Parler" title="Parler" src="resources/chat-icon.png"></a></div>
-	</div>
-	<div class="centre_gal radius shadow">
-		<div class="centre_img">
-			<map name="Cluster">
+		<div class="gauche_gal radius shadow">
+			<div class="gauche_img"><a><img alt="Avancer" title="Avancer" src="resources/arrow.png"></a></div>
+			<div class="gauche_img"><a><img alt="Prendre" title="Prendre" src="resources/main.png"></a></div>
+			<div class="gauche_img"><a><img alt="Regarder" title="Regarder" src="resources/oeil.png"></a></div>
+			<div class="gauche_img"><a><img alt="Utiliser" title="Utiliser" src="resources/outil.png"></a></div>
+			<div class="gauche_img"><a><img alt="Parler" title="Parler" src="resources/chat-icon.png"></a></div>
+		</div>
+		<div class="centre_gal radius shadow">
+			<div class="centre_img">
+				<map name="Cluster">
 				<area shape="rect" href="http://www.ikea.com" title="Ikea" alt="Ikea" target="_blank" coords="320,330,460,550">
 				<area shape="rect" href="http://www.apple.com" title="Apple" alt="Apple" target="_blank" coords="980,490,800,350">
-			</map>
-		<img usemap="#Cluster" src="resources/cluster.jpg">
-
+				</map>
+				<img usemap="#Cluster" src="resources/cluster.jpg">
+			</div>
+		</div>	
+		<div class="droite_gal radius shadow">
+			<div class="droite_img"><img title="bouc" src="resources/book.png"></div>
+			<div class="droite_img"><img title="towel" src="resources/towel.png"></div>
+			<div class="droite_mur">&nbsp;</div>
 		</div>
-	</div>	
-	<div class="droite_gal radius shadow">
-		<div class="droite_img"><img title="bouc" src="resources/book.png"></div>
-		<div class="droite_img"><img title="towel" src="resources/towel.png"></div>
-		<div class="droite_mur">&nbsp;</div>
+	<div class="box radius shadow">
+				<p class="box-texte">Vous <span class="big">entrez</span> alors dans une grande piece remplie <br />d'<span class="ordi">ordinateurs</span>...
+				<br /><span class="italic">-Bonjour, vous êtes nouveau ici ?</span>
+				<span class="little-height"><input type="text" size="55"></span>
+				<input type="submit" value="Repondre">
+				</p>
 	</div>
 	</div>
+
 
 </body>
 </html>
