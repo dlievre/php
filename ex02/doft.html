@@ -1,70 +1,51 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-1">
+	<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
 	<title>Day of the 42</title>
 	<link rel="stylesheet" media="screen" type="text/css" href="doft.css"/>
-	<style>
-	body{
-		background-color: #505050;
-	}
-		#div_haut_gal{
-			display: block;
-			position: relative;
-			background-color: #909090;
-			width: 80%;
-			height: 200px;
-		}
-		div.haut_img_banner img {
-			position: absolute;
-			left: 10px;
-    		width: 50%;
-    		height: auto;
-		}
-		div.haut_img_loop img {
-			position: absolute;
-			right: 10px;
-    		width: 10%;
-    		height: auto;
-    		bottom: 0px;
-		}
-		.shadow{
-	-moz-box-shadow: 10px 10px 5px 0px #656565;
-	-webkit-box-shadow: 10px 10px 5px 0px #656565;
-	-o-box-shadow: 10px 10px 5px 0px #656565;
-   box-shadow: 8px 11px 8px 0 #000;
-}
-
-.radius{
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;	
-}
-		h2{
-			color: #333333;
-			margin: 0;
-			font-size: 2vw;
-		}
-		h1{
-			text-align: center;
-			font-size: 2.5vw;
-			color: white;
-		}
-
-		p.img_title{
-			text-align: center;
-		}
-		td p{
-			font-size: 1vw;
-		}
-
-	</style>
+	
 </head>
 
 <body>
-	<div id="div_haut_gal" class="radius shadow">
-	<div class="haut_img_banner"><img src="resources/day_of_the_42.png"></div>
-	<div class="haut_img_loop"><img src="resources/loupe.png"></div>
-	<div class="haut_img_loop"><img src="resources/loupe.png"></div>		
-	</div>	
+	<div class="haut_gal radius shadow">
+		<div class="haut_img_banner"><img title="dayof42" src="resources/day_of_the_42.png"></div>
+		<div class="haut_img_loop"><img title="loupe" src="resources/loupe.png"></div>
+		<div class="haut_img_reload"><a href="http://www.disney.com" target="_blank"><img title="Recommencer au début" src="resources/reload.png"></div>
+		<div class="haut_img_close"><a href="http://www.relaischateaux.com"  target="_blank"><img title="Déconnecter" src="resources/close.gif"></div>	
+	</div>
+	<div class="content_gal" align="center">
+		<div class="gauche_gal radius shadow">
+			<div class="gauche_img"><a><img alt="Avancer" title="Avancer" src="resources/arrow.png"></a></div>
+			<div class="gauche_img"><a><img alt="Prendre" title="Prendre" src="resources/main.png"></a></div>
+			<div class="gauche_img"><a><img alt="Regarder" title="Regarder" src="resources/oeil.png"></a></div>
+			<div class="gauche_img"><a><img alt="Utiliser" title="Utiliser" src="resources/outil.png"></a></div>
+			<div class="gauche_img"><a><img alt="Parler" title="Parler" src="resources/chat-icon.png"></a></div>
+		</div>
+		<div class="centre_gal radius shadow">
+			<div class="centre_img">
+				<map name="Cluster">
+				<area shape="rect" href="http://www.ikea.com" title="Ikea" alt="Ikea" target="_blank" coords="320,330,460,550">
+				<area shape="rect" href="http://www.apple.com" title="Apple" alt="Apple" target="_blank" coords="980,490,800,350">
+				</map>
+				<img usemap="#Cluster" src="resources/cluster.jpg">
+			</div>
+		</div>	
+		<div class="droite_gal radius shadow">
+			<div class="droite_img"><img title="bouc" src="resources/book.png"></div>
+			<div class="droite_img"><img title="towel" src="resources/towel.png"></div>
+			<div title="wall" class="droite_mur"><p>&nbsp;</p></div>
+		</div>
+	</div>
+	<div class="content_gal">
+		<div class="box radius shadow">
+		<p class="box-texte">Vous <span class="big">entrez</span> alors dans une grande piece remplie <br />d'<span class="ordi">ordinateurs</span>...
+		<br /><span class="italic">-Bonjour, vous êtes nouveau ici ?</span>
+		<span class="little-height"><input type="text" size="55"></span>
+		<input type="submit" value="Repondre">
+		</p>
+		</div>
+	</div>
+
 </body>
 </html>

@@ -1,0 +1,165 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-1">
+	<title>Day of the 42</title>
+	<link rel="stylesheet" media="screen" type="text/css" href="doft.css"/>
+	<style>
+	body{
+		background-color: #505050;
+		margin: 0px;
+    	padding: 5px;
+	}
+		#haut_gal{
+			display: block;
+			position: relative;
+			background-color: #909090;
+			width: 1430px;
+			height: 140px;
+			padding-top: 5px;
+		}
+		div.haut_img_banner img {
+			position: absolute;
+			left: 10px;
+    		width: 500px;
+    		height: auto;
+		}
+		div.haut_img_loop img {
+			position: absolute;
+			right: 20px;
+    		width: 230px;
+    		height: auto;
+    		bottom: 0px;
+		}
+		div.haut_img_reload img {
+			position: absolute;
+			right: 4px;
+    		width: 20px;
+    		height: auto;
+    		top: 2px;
+		}
+		div.haut_img_close img {
+			position: absolute;
+			right: 4px;
+    		width: 20px;
+    		height: auto;
+    		bottom: 2px;
+		}
+		#gauche_gal, #droite_gal{
+			display: block;
+			position: relative;
+			background-color: #909090;
+			width: 140px;
+			height: 425px;
+			padding-top: 5px;
+			padding-bottom: 0px;
+			margin-top: 10px;
+		}
+		div.gauche_img img, div.droite_img img {
+			position: relative;
+			display: block;
+			margin-top: 5px;
+			margin-bottom: 5px;
+    		margin-left: auto;
+    		margin-right: auto;
+    		width: 75px;
+    		height: auto;
+    	}
+    	div.droite_img img {
+			position: relative;
+			display: block;
+    		margin-left: auto;
+    		margin-right: auto;
+    		width: 75px;
+    		height: auto;
+    	}
+    	div.droite_mur {
+			position: relative;
+			display: block;
+			background-image: url("resources/brick.jpg");
+			background-repeat: repeat;
+    		margin-left: auto;
+    		margin-right: auto;
+    		width: 123px;
+    		height: 70px;
+    	}
+    	#centre_gal {
+			display: block;
+			position: relative;
+			background-color: #909090;
+			width: 1025px;
+			height: 590px;
+			margin-top: 10px;
+
+			margin-top: 0px;
+		}
+		div.centre_img img {
+			position: relative;
+			display: block;
+    		padding: 4px;
+    		margin: 0px;
+    		width: 1000px;
+    		height: auto;
+    	}
+		.shadow{
+			-moz-box-shadow: 10px 10px 5px 0px #656565;
+			-webkit-box-shadow: 10px 10px 5px 0px #656565;
+			-o-box-shadow: 10px 10px 5px 0px #656565;
+			box-shadow: 8px 11px 8px 0 #000;
+		}
+
+		.radius{
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;	
+}
+		h2{
+			color: #333333;
+			margin: 0;
+			font-size: 2vw;
+		}
+		h1{
+			text-align: center;
+			font-size: 2.5vw;
+			color: white;
+		}
+
+		p.img_title{
+			text-align: center;
+		}
+		td p{
+			font-size: 1vw;
+		}
+.content{
+	display: inline;
+}
+	</style>
+
+</head>
+
+<body>
+	<div id="haut_gal" class="radius shadow">
+		<div class="haut_img_banner"><img src="resources/day_of_the_42.png"></div>
+		<div class="haut_img_loop"><img src="resources/loupe.png"></div>
+		<div class="haut_img_reload"><img src="resources/reload.png"></div>
+		<div class="haut_img_close"><img src="resources/close.gif"></div>	
+	</div>
+	<table width="1025">
+	<tr><td>
+	<div id="gauche_gal" class="radius shadow">
+		<div class="gauche_img"><img src="resources/arrow.png"></div>
+		<div class="gauche_img"><img src="resources/main.png"></div>
+		<div class="gauche_img"><img src="resources/oeil.png"></div>
+		<div class="gauche_img"><img src="resources/outil.png"></div>
+		<div class="gauche_img"><img src="resources/chat-icon.png"></div>
+	</div>
+	<div id="centre_gal" class="radius shadow">
+		<div class="centre_img"><img src="resources/cluster.jpg"></div>
+	</div>	
+	<div id="droite_gal" class="radius shadow">
+		<div class="droite_img"><img src="resources/book.png"></div>
+		<div class="droite_img"><img src="resources/towel.png"></div>
+		<div class="droite_mur">&nbsp;</div>
+	</div>
+	</td></tr></table>
+</body>
+</html>
