@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-1">
+	<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
 	<title>Day of the 42</title>
 	<link rel="stylesheet" media="screen" type="text/css" href="doft.css"/>
 	<style>
@@ -29,7 +29,7 @@
 		div.haut_img_loop img {
 			position: absolute;
 			/*position: relative;*/
-			right: 20px;
+			right: 40px;
     		width: 230px;
     		height: auto;
     		bottom: -20px;
@@ -66,9 +66,8 @@
 			padding-bottom: 0px;
 			margin: 5px;
 		}
-		div.gauche_img img, div.droite_img img {
-			/*position: relative;*/
-			display: block;
+
+    	div.gauche_img img, div.droite_img img {
 			margin-top: 5px;
 			margin-bottom: 5px;
     		margin-left: auto;
@@ -76,14 +75,7 @@
     		width: 75px;
     		height: auto;
     	}
-    	div.droite_img img {
-			/*position: relative;*/
-			display: block;
-    		margin-left: auto;
-    		margin-right: auto;
-    		width: 75px;
-    		height: auto;
-    	}
+
     	div.droite_mur {
 			/*position: relative;*/
 			display: block;
@@ -103,24 +95,18 @@
 			height: 590px;
 			margin: 5px;
 		}
-		div.centre_img img {
-			/*position: relative;*/
-			display: block;
-    		padding: 4px;
-    		margin: 0px;
+		.centre_img img {
+			/*display: block;*/
+    		padding: 12px;
+    		/*margin: 8px;*/
     		width: 1000px;
     		height: auto;
     	}
 		.shadow{
-			-moz-box-shadow: 10px 10px 5px 0px #656565;
-			-webkit-box-shadow: 10px 10px 5px 0px #656565;
-			-o-box-shadow: 10px 10px 5px 0px #656565;
-			box-shadow: 8px 11px 8px 0 #000;
+			box-shadow: 5px 5px 5px 5px  #212121;
 		}
 
 		.radius{
-			-webkit-border-radius: 10px;
-			-moz-border-radius: 10px;
 			border-radius: 10px;	
 }
 		h2{
@@ -133,31 +119,46 @@
 			font-size: 2.5vw;
 			color: white;
 		}
+		.gauche_img a:hover, a:focus
+		{
+			display: block;
+			margin-top: -3px;
+			margin-bottom: -3px;
+    		width: 75px;
+			border: 3px solid red;
+		}
 	</style>
 
 </head>
 
 <body>
 	<div class="haut_gal radius shadow">
-		<div class="haut_img_banner"><img src="resources/day_of_the_42.png"></div>
-		<div class="haut_img_loop"><img src="resources/loupe.png"></div>
-		<div class="haut_img_reload"><img src="resources/reload.png"></div>
-		<div class="haut_img_close"><img src="resources/close.gif"></div>	
+		<div class="haut_img_banner"><img title="dayof42" src="resources/day_of_the_42.png"></div>
+		<div class="haut_img_loop"><img title="loupe" src="resources/loupe.png"></div>
+		<div class="haut_img_reload"><a href="http://www.disney.com" target="_blank"><img title="Recommencer au début" src="resources/reload.png"></div>
+		<div class="haut_img_close"><a href="http://www.relaischateaux.com"  target="_blank"><img title="Déconnecter" src="resources/close.gif"></div>	
 	</div>
 	<div class="content_gal" align="center">
 	<div class="gauche_gal radius shadow">
-		<div class="gauche_img"><img src="resources/arrow.png"></div>
-		<div class="gauche_img"><img src="resources/main.png"></div>
-		<div class="gauche_img"><img src="resources/oeil.png"></div>
-		<div class="gauche_img"><img src="resources/outil.png"></div>
-		<div class="gauche_img"><img src="resources/chat-icon.png"></div>
+		<div class="gauche_img"><a><img alt="Avancer" title="Avancer" src="resources/arrow.png"></a></div>
+		<div class="gauche_img"><a><img alt="Prendre" title="Prendre" src="resources/main.png"></a></div>
+		<div class="gauche_img"><a><img alt="Regarder" title="Regarder" src="resources/oeil.png"></a></div>
+		<div class="gauche_img"><a><img alt="Utiliser" title="Utiliser" src="resources/outil.png"></a></div>
+		<div class="gauche_img"><a><img alt="Parler" title="Parler" src="resources/chat-icon.png"></a></div>
 	</div>
 	<div class="centre_gal radius shadow">
-		<div class="centre_img"><img src="resources/cluster.jpg"></div>
+		<div class="centre_img">
+			<map name="Cluster">
+				<area shape="rect" href="http://www.ikea.com" title="Ikea" alt="Ikea" target="_blank" coords="320,330,460,550">
+				<area shape="rect" href="http://www.apple.com" title="Apple" alt="Apple" target="_blank" coords="980,490,800,350">
+			</map>
+		<img usemap="#Cluster" src="resources/cluster.jpg">
+
+		</div>
 	</div>	
 	<div class="droite_gal radius shadow">
-		<div class="droite_img"><img src="resources/book.png"></div>
-		<div class="droite_img"><img src="resources/towel.png"></div>
+		<div class="droite_img"><img title="bouc" src="resources/book.png"></div>
+		<div class="droite_img"><img title="towel" src="resources/towel.png"></div>
 		<div class="droite_mur">&nbsp;</div>
 	</div>
 	</div>
